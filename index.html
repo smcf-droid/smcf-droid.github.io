@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Redaction+35:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+  </style>
+</head>
+<body>
+<header>
+  <h1>HW 1: HTML and CSS </h1>     
+  <h2><time id="datetime-local"></time></h2>
+  <script>
+    const datetimeElement = document.getElementById('datetime-local');
+    const now = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    const formattedDate = now.toLocaleDateString(undefined, options);
+    datetimeElement.textContent = formattedDate;
+  </script>  
+  <nav>
+     <a href="index.html" aria-current="page">Home</a>
+     <a href="one.html">Satellites and Signals</a>
+     <a href="two.html">Calculating a Location</a>
+     <a href="three.html">Accuracy</a>
+  </nav>
+  <time id="datetime-local"></time>
+</header>
+
+<main>
+
+
+  <section>
+  <h1>What is GPS?</h1>
+
+  <figure>
+    <img class="intext-image" src="img/7414657260_a6288507a4_o.jpg" alt="A GPS Satellite">
+  </figure>
+
+  <p class="intro">
+    GPS is a satellite-based system that helps devices find their location.
+    Satellites send signals, ground stations monitor the system, and GPS receivers, like those in phones and cars, use the signals to determine their position on Earth.
+    GPS is an integral part of modern life, used for navigation, mapping, and timing in various applications.
+    It is maintained by the United States government and is freely available to anyone with a GPS receiver.
+  </p>
+  
+  <details>
+    <summary>Learn More about GPS Segments</summary>
+    <p>
+      The GPS system has three main parts- the space segment, the control segment, and the user segment. 
+      The space segment consists of 24 satellites transmitting one-way signals giving current GPS satellite position and time.
+      The control segment are the monitor and control stations maintaining satellite health and orbit.
+      The user segment includes GPS receivers, which can be found in phones, cars, and other devices.
+    </p>
+  </details>
+  <details>
+    <summary>Learn More about GPS Services</summary>
+    <p>
+      GPS services are used by both military and civilian users for various applications, such as navigation, mapping, and timing synchronization.
+      Various GPS augmentation systems and techniques can enhance system performance, including accuracy, integrity, and availability.
+      GPS performance has given it millions of users worldwide, and it is expected to continue to be a critical technology for many applications in the future.
+    </p>
+  </details>
+  <details>
+    <summary>Learn More about the Future of GPS</summary>
+    <p>
+      As technology advances, GPS is expected to become even more accurate and reliable. 
+      The United States plan to implement features to support safety of life applications in aviation, maritime, and other critical sectors.
+    </p>
+  </details>
+  <details>
+    <summary>Sources Used</summary>
+    <ul>
+      <li><a href="https://www.gps.gov/gps">https://www.gps.gov/gps/</a></li>
+      <li><a href="https://www.gps.gov/space-segment">https://www.gps.gov/space-segment</a></li>
+      <li><a href="https://www.gps.gov/trilateration">https://www.gps.gov/trilateration</a></li>
+     <li><a href="https://www.gps.gov/gps-accuracy">https://www.gps.gov/gps-accuracy</a></li>
+     </ul>
+  </details>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Sean M. All rights reserved.</p>
+  <p>This site is for academic purposes only.</p>
+  <p>CST 336 Internet Programming.</p>
+    <img src="img/logo.jpg" alt="CSUMB Logo">
+</footer>
+</body>
+</html>

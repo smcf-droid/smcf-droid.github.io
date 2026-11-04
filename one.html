@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Redaction+35:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+  </style>
+</head>
+<body>
+<header>
+  <h1>HW 1: HTML and CSS </h1>     
+  <h2><time id="datetime-local"></time></h2>
+  <script>
+    const datetimeElement = document.getElementById('datetime-local');
+    const now = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    const formattedDate = now.toLocaleDateString(undefined, options);
+    datetimeElement.textContent = formattedDate;
+  </script>  
+  <nav>
+     <a href="index.html">Home</a>
+     <a href="one.html" aria-current="page">Satellites and Signals</a>
+     <a href="two.html">Calculating a Location</a>
+     <a href="three.html">Accuracy</a>
+  </nav>
+</header>
+
+<main>
+
+  <section>
+    <h1>Satellites and Signals</h1>
+      <figure>
+    <img class="intext-image" src="img/constellation.jpg" alt="Space Segment Graphic">
+  </figure>
+    <p class="intro">
+      GPS satellites orbit Earth and broadcast signals containing the time the signal was sent and information about the satellite’s position. 
+      A receiver uses those signals to estimate how far away the satellites are. Much of this information is taken care of in the space segment.
+    </p>
+    <details>
+      <summary>The Space Segment</summary>
+      <p>
+      The GPS space segment consists of satellites arranged in a constellation transmitting radio signals to users.
+      The US Space force commits to operating at least 24 GPS satellites, with a 95% uptime.
+      The space force has had 31 GPS satellites operating in the last decade, with 24 of them being operational at any given time.
+      </p>
+    </details>
+    <details>
+      <summary> Constellation Arrangement</summary>
+      <p>
+        GPS satellites fly in medium earth orbit at an altitude of about 20,200 kilometers (12,550 miles).
+        The satellites circle the Earth twice each day, and their orbits are arranged so that at least four satellites are visible from virtually any point on the planet.
+        Extra satellites are included in the constellation to improve accuracy and reliability, and to provide redundancy in case of satellite failures.
+        As of June 2011, the Air Force operates in the "Expandable 24" configuration, climbing up to a mostly 27-slot constellation in the modern day.
+      </p>
+    </details>
+    <details>
+      <summary> Current and Future Developments</summary>
+      <p>
+        The US Space Force continues to maintain and upgrade the GPS constellation, with plans to launch new satellites and improve the system's performance. 
+        Future developments may include enhanced signal capabilities, increased accuracy, and improved resistance to interference.
+      </p>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Sean M. All rights reserved.</p>
+  <p>This site is for academic purposes only.</p>
+  <p>CST 336 Internet Programming.</p>
+    <img src="img/logo.jpg" alt="CSUMB Logo">
+</footer>
+</body>
+</html>
