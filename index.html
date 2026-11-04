@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HW 1: HTML and CSS</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +14,7 @@
 <body>
 <header>
   <h1>HW 1: HTML and CSS </h1>     
-  <h2><time id="datetime-local"></time></h2>
+  <p id="datetime-local"></p>
   <script>
     const datetimeElement = document.getElementById('datetime-local');
     const now = new Date();
@@ -27,7 +28,6 @@
      <a href="two.html">Calculating a Location</a>
      <a href="three.html">Accuracy</a>
   </nav>
-  <time id="datetime-local"></time>
 </header>
 
 <main>
@@ -48,7 +48,7 @@
   </p>
   
   <details>
-    <summary>Learn More about GPS Segments</summary>
+    <summary>GPS Segments</summary>
     <p>
       The GPS system has three main parts- the space segment, the control segment, and the user segment. 
       The space segment consists of 24 satellites transmitting one-way signals giving current GPS satellite position and time.
@@ -57,7 +57,7 @@
     </p>
   </details>
   <details>
-    <summary>Learn More about GPS Services</summary>
+    <summary>GPS Services</summary>
     <p>
       GPS services are used by both military and civilian users for various applications, such as navigation, mapping, and timing synchronization.
       Various GPS augmentation systems and techniques can enhance system performance, including accuracy, integrity, and availability.
@@ -65,7 +65,7 @@
     </p>
   </details>
   <details>
-    <summary>Learn More about the Future of GPS</summary>
+    <summary>The Future of GPS</summary>
     <p>
       As technology advances, GPS is expected to become even more accurate and reliable. 
       The United States plan to implement features to support safety of life applications in aviation, maritime, and other critical sectors.

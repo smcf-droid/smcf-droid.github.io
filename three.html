@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HW 1: HTML and CSS</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,21 +14,20 @@
 <body>
 <header>
   <h1>HW 1: HTML and CSS </h1>     
-  <h2><time id="datetime-local"></time></h2>
+  <p id="datetime-local"></p>
   <script>
     const datetimeElement = document.getElementById('datetime-local');
     const now = new Date();
     const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
     const formattedDate = now.toLocaleDateString(undefined, options);
     datetimeElement.textContent = formattedDate;
-  </script>    
+  </script>     
   <nav>
      <a href="index.html">Home</a>
      <a href="one.html">Satellites and Signals</a>
      <a href="two.html">Calculating a Location</a>
      <a href="three.html" aria-current="page">Accuracy</a>
   </nav>
-  <time id="datetime-local"></time>
 </header>
 
 <main>
