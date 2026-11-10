@@ -144,12 +144,12 @@ function gradeQuiz() {
   if (score > 80)
   {
     feedback.textContent = "Congratulations you scored over 80!"
-    totalScore.className = "bg-success text-white p-2 rounded";
+    feedback.className = "bg-success text-white p-2 rounded";
     totalScore.textContent = `Total Score: ${score}`;
     totalScore.className = "bg-success text-white p-2 rounded";
   } else {
     feedback.textContent = "Unfortunately, you didn't pass."
-    totalScore.className = "bg-danger text-white p-2 rounded";
+    feedback.className = "bg-danger text-white p-2 rounded";
     totalScore.textContent = `Total Score: ${score}`;
     totalScore.className = "bg-danger text-white p-2 rounded";
   }
