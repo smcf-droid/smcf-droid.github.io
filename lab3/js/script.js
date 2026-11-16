@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#state").addEventListener("change", loadCounties);
   document.querySelector("#zip").addEventListener("change", displayCity);
   document.querySelector("#username").addEventListener("change", checkUsername);
+  document.querySelector("#password").addEventListener("click", passwordSuggest);
+  document.querySelector("#passwordAgain").addEventListener("change", checkPassword);
   document.querySelector("#signupForm").addEventListener("submit", validateForm);
 });
 
@@ -11,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 async function displayCity() {
   try {
     let zipCode = document.querySelector("#zip").value;
-    let url = `https://csumb.space/api/cityInfoAPI.php?zip=${zipCode}`;
+    let url = `https://csumb.space/api/geo/cityInfoAPI.php?zip=${zipCode}`;
     let response = await fetch(url);
     let data = await response.json();
 
@@ -45,7 +47,7 @@ async function loadStates() {
   stateMenu.appendChild(defaultOption);
 
   try {
-    let url = "https://csumb.space/api/allStatesAPI.php";
+    let url = "https://csumb.space/api/geo/statesAPI.php";
     let response = await fetch(url);
     let data = await response.json();
 
@@ -84,7 +86,7 @@ async function loadCounties() {
   countyMenu.appendChild(defaultOption);
 
   try {
-    let url = `https://csumb.space/api/countyListAPI.php?state=${stateUsps}`;
+    let url = `https://csumb.space/api/geo/countyListAPI.php?state=${stateUsps}`;
     let response = await fetch(url);
     let data = await response.json();
 
@@ -149,6 +151,23 @@ async function checkPassword() {
   }
 
   passwordError.textContent = "";
+  return true;
+}
+
+async function passwordSuggest() {
+  let pw = document.querySelector("#password").value;
+  let passwordSuggest = document.querySelector("#passwordSuggest");
+  
+  let url = "https://csumb.space/api/suggestedPassword.php?length=8";
+  let response = await fetch(url);
+  let data = await response.json();
+
+  if (pw.length == 0) {
+    passwordSuggest.textContent = "Suggested Password: " + data.password;
+    return false;
+  }
+
+  passwordSuggest.textContent = "";
   return true;
 }
 
