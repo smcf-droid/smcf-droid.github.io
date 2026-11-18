@@ -18,7 +18,7 @@ main {
   flex: 1;
 }
 
-form {
+#pokemon {
   padding: 30px;
   background: white;
   border-radius: 12px;
